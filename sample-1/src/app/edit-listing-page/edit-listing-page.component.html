@@ -1,1 +1,14 @@
-<p>edit-listing-page works!</p>
+<div class="content-box">
+    <div>
+        Name: <input type="text" [(ngModel)]="listing.name">
+    </div>
+    <div>
+        Price: <input type="text" [(ngModel)]="listing.price">
+    </div>
+    <div>
+        Desc: <textarea rows="5" cols="50" [(ngModel)]="listing.description"></textarea>
+    </div>
+    <div>
+        <button (click)="saveListing(listing)">Save</button>
+    </div>
+</div>

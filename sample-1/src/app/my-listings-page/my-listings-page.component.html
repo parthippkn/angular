@@ -1,1 +1,10 @@
-<p>my-listings-page works!</p>
+<div>
+    <div class="content-box" *ngFor="let listing of listings">
+        <h2>{{listing.name}} - ${{listing.price}}</h2>
+        <p>{{listing.description}}</p>
+        <div style="display: flex; justify-content: flex-end; padding: 1px;">
+            <a routerLink="/edit-listing/{{listing.id}}"><button>Edit</button></a>
+            <button (click)="onDeleteListing(listing.id)">Delete</button>
+        </div>
+    </div>
+</div>

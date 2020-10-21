@@ -15,6 +15,7 @@ button {
     padding: 16px;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    margin: 2px;
 }
 
 input, textarea {
