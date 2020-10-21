@@ -11,21 +11,18 @@ import { Listing } from '../types';
 })
 export class NewListingPageComponent implements OnInit {
 
-  listing:Listing = {
-    id: '',
-    name: '',
-    description: '',
-    price: 0.00
-  };
+  buttonLabel:string;
 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    this.buttonLabel = "Create";
   }
 
-  createListing(): void {
-    this.listing.id = new Date().getTime() + "";
-    fakeMyListings.push(this.listing);
+  createListing(listing:Listing): void {
+    console.log('In createListing' , listing)
+    listing.id = new Date().getTime() + "";
+    fakeMyListings.push(listing);
     this.router.navigateByUrl("/my-listings")
   }
 }

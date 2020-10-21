@@ -10,6 +10,7 @@ import {fakeMyListings} from '../fake-data'
 })
 export class EditListingPageComponent implements OnInit {
 
+  buttonLabel:string = "Save Changes";
   listing:Listing;
 
   constructor(private route:ActivatedRoute, private router: Router) { }
