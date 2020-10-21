@@ -20,7 +20,6 @@ export class EditListingPageComponent implements OnInit {
   }
 
   saveListing(listingObj): void {
-    console.log('listingObj : ', listingObj)
     this.router.navigateByUrl("/my-listings")
   }
   
